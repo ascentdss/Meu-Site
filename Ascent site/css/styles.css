@@ -1,0 +1,512 @@
+/* Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease-in-out; /* Suavidade nas transições */
+}
+
+body {
+    background-color: #010144;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 80px; /* Cria espaço para o cabeçalho fixo */
+}
+
+/* Animação de Fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+header {
+    background: transparent; /* Remover a imagem de fundo e deixar transparente */
+    color: #967226;
+    padding: 15px 0;
+    position: fixed; /* Mantém o cabeçalho fixo no topo */
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+
+nav {
+    max-width: 1200px;  
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Mantém a logo no tamanho correto */
+.logo img {
+    height: 50px;
+    width: auto; /* Mantém a proporção */
+}
+
+/* Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease-in-out; /* Suavidade nas transições */
+}
+
+body {
+    background-color: #000000;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 0px; /* Cria espaço para o cabeçalho fixo */
+}
+
+/* Estilos do Cabeçalho */
+header {
+    background: transparent; /* Fundo transparente */
+    color: #967226;
+    padding: 15px 0;
+    position: fixed; /* Fixa o cabeçalho no topo */
+    width: 100%; /* Largura total */
+    top: 0; /* Alinha ao topo da página */
+    z-index: 999; /* Garante que fique acima de outros elementos */
+    display: flex; /* Flexbox para alinhamento */
+    justify-content: space-between; /* Espaço entre logo e menu */
+    align-items: center; /* Alinha verticalmente no centro */
+    animation: fadeIn 1.5s ease-in-out forwards; /* Animação de fade-in */
+}
+
+/* Mantém a logo no tamanho correto */
+.logo img {
+    height: 50px; /* Ajuste a altura da logo */
+    width: auto; /* Mantém a proporção */
+}
+
+/* Menu */
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+.menu li:nth-child(2) {
+    animation-delay: 0.5s;
+}
+.menu li:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+.menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Hero Section */
+#hero {
+    position: relative;
+    height: 100vh; /* Altura do banner */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    overflow: hidden; /* Garante que nada saia da área do banner */
+}
+
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cobre toda a área do banner */
+    z-index: -1; /* Coloca o vídeo atrás do conteúdo */
+}
+
+.hero-content {
+    position: relative; /* Para que o texto fique acima do vídeo */
+    z-index: 1; /* Garantindo que o texto esteja acima do vídeo */
+    padding: 10px; /* Adiciona um pouco de espaçamento */
+}
+
+/* Ajustes adicionais para o texto */
+.hero-content h2 {
+    font-size: 27px;
+    margin-bottom: 20px;
+    opacity: 0; /* Começa invisível */
+    animation: fadeIn 2s ease-in-out forwards; /* Animação de aparecimento suave */
+}
+
+.hero-content p {
+    font-size: 18px;
+    opacity: 0; /* Começa invisível */
+    animation: fadeIn 1.5s ease-in-out forwards; /* Animação de aparecimento suave */
+    animation-delay: 0.5s; /* Delay para o parágrafo aparecer após o título */
+}
+
+/* Seção de Serviços */
+#servicos {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #979797;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+#servicos h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    animation: slideUp 1.5s ease-in-out forwards;
+}
+
+/* Carrossel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.image-item {
+    min-width: 300px; /* Ajuste a largura mínima conforme necessário */
+    margin-right: 20px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.image-item img {
+    width: 100%; /* Para que a imagem preencha o container */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Bordas arredondadas */
+    transition: transform 0.5s ease-in-out;
+}
+
+.image-item img:hover {
+    transform: scale(1.02); /* Zoom suave ao passar o mouse */
+}
+
+/* Rodapé */
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+/* Estilo para a seção dos serviços */
+#servicos {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+}
+
+.carousel {
+    display: flex;
+    gap: 20px;
+}
+
+.image-item {
+    position: relative;
+    width: 300px; /* ajuste o tamanho conforme necessário */
+}
+
+.service-box {
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo transparente */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    transition: transform 0.3s ease; /* Efeito ao passar o mouse */
+}
+
+.service-box img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.service-box h3 {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+.service-box p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.image-item:hover .service-box {
+    transform: scale(1.05); /* Efeito zoom ao passar o mouse */
+}
+/* Estilos padrões (para telas grandes) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 300px;
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+#hero {
+    position: relative;
+    height: 100vh;
+}
+
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+}
+
+/* Estilos para telas menores */
+@media screen and (max-width: 768px) {
+    .logo img {
+        width: 50px; /* Reduz a logo para telas menores */
+    }
+
+    .menu {
+        flex-direction: column; /* Menu em coluna para mobile */
+        align-items: center;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+
+    .hero-content h2 {
+        font-size: 24px; /* Reduz o tamanho da fonte do título */
+    }
+
+    .hero-content p {
+        font-size: 16px; /* Reduz o tamanho da fonte do parágrafo */
+    }
+
+    .carousel-container {
+        padding: 10px;
+    }
+
+    .service-box img {
+        width: 100%;
+        height: auto; /* Imagens responsivas */
+    }
+
+    .service-box h3 {
+        font-size: 18px;
+    }
+
+    .service-box p {
+        font-size: 14px;
+    }
+
+    #sobre {
+        padding: 20px;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
+
+/* Para telas ainda menores, como smartphones */
+@media screen and (max-width: 480px) {
+    .hero-content h2 {
+        font-size: 20px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .menu li a {
+        font-size: 16px; /* Aumenta a legibilidade dos links no menu */
+    }
+}
+/* Menu fixo para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    header {
+        background: white; /* Fundo branco para o cabeçalho no celular */
+        padding: 11px 0; /* Ajusta o padding do cabeçalho */
+    }
+
+    .menu {
+        flex-direction: row; /* Menu em linha */
+        justify-content: center; /* Centraliza o menu */
+    }
+
+    .menu li {
+        margin: 10px; /* Margem reduzida */
+    }
+
+    .menu li a {
+        color: #333; /* Cor do texto para contraste */
+        font-size: 15px; /* Ajusta o tamanho da fonte */
+    }
+
+    .logo img {
+        width: 100px; /* Ajusta a logo para o tamanho apropriado */
+ }   
+/* Mantém a logo no tamanho correto */
+.logo img {
+    height: 20px;
+    width: auto; /* Mantém a proporção */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #007bff;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    animation: fadeIn 2s ease-in;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    animation: slideIn 1s ease-in-out;
+}
+
+h2 {
+    color: #007bff;
+    margin-top: 20px;
+}
+
+.sobre, .servicos, .missao {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    padding: 10px;
+    background: #e9ecef;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+li:hover {
+    background: #007bff;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #007bff;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
